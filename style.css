@@ -1,30 +1,162 @@
+/* Базові налаштування */
+:root {
+      --primary-color: #007bff;
+      /* Синій для акцентів */
+      --secondary-color: #212529;
+      /* Темний для тексту */
+      --bg-color: #f8f9fa;
+      /* Світло-сірий фон */
+      --border-color: #e9ecef;
+}
+
 body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--secondary-color);
+      line-height: 1.6;
+}
+
+.container {
+      max-width: 900px;
+      margin: 40px auto;
       padding: 20px;
-      background: #f5f5f5;
-      color: #333;
-}
-
-header {
-      text-align: center;
-      margin-bottom: 30px;
-}
-
-h1 {
-      margin-bottom: 5px;
-}
-
-section {
-      margin-bottom: 20px;
-      padding: 15px;
-      background: white;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
 }
 
-footer {
+/* Header/Шапка */
+.header {
       text-align: center;
-      margin-top: 30px;
+      padding: 30px 0;
+      border-bottom: 5px solid var(--primary-color);
+      background-color: #ffffff;
+}
+
+.header h1 {
+      margin: 0 0 5px;
+      color: var(--secondary-color);
+      font-size: 2.5em;
+}
+
+.job-title {
+      margin: 0 0 15px;
+      font-size: 1.2em;
+      color: var(--primary-color);
+      font-weight: bold;
+}
+
+.contact-info span {
+      margin: 0 15px;
       font-size: 0.9em;
-      color: #777;
+}
+
+.contact-info a {
+      color: var(--primary-color);
+      text-decoration: none;
+}
+
+.contact-info a:hover {
+      text-decoration: underline;
+}
+
+/* Заголовки секцій */
+h2 {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 5px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+}
+
+/* Досвід роботи та Освіта */
+.job-entry,
+.edu-entry,
+.project-entry {
+      margin-bottom: 20px;
+}
+
+.job-entry h3,
+.project-entry h3 {
+      margin: 0;
+      font-size: 1.2em;
+      color: var(--secondary-color);
+}
+
+.company-date {
+      font-style: italic;
+      font-size: 0.9em;
+      color: #6c757d;
+      margin: 5px 0 10px;
+}
+
+.experience ul {
+      padding-left: 20px;
+}
+
+.experience li {
+      margin-bottom: 5px;
+}
+
+/* Навички */
+.skills-list p {
+      margin: 5px 0;
+}
+
+.skills-list strong {
+      color: var(--primary-color);
+      display: inline-block;
+      min-width: 150px;
+      /* Для вирівнювання, якщо потрібно */
+}
+
+/* Горизонтальна лінія */
+hr {
+      border: 0;
+      height: 1px;
+      background: var(--border-color);
+      margin: 25px 0;
+}
+
+/* Посилання в Проєктах */
+.project-entry a {
+      color: var(--primary-color);
+      text-decoration: none;
+}
+
+.project-entry a:hover {
+      text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+      font-size: 0.8em;
+      color: #6c757d;
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 768px) {
+      .container {
+            margin: 20px;
+            padding: 15px;
+      }
+
+      .header h1 {
+            font-size: 2em;
+      }
+
+      .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+      }
+
+      .contact-info span {
+            margin: 5px 0;
+      }
 }
